@@ -90,6 +90,7 @@ suites:
       'centos-5.11',
       'centos-6.8',
       'centos-7.2',
+      'debian-8.5',
       'fedora-24',
       'ubuntu-14.04',
       'opensuse-13.2',
