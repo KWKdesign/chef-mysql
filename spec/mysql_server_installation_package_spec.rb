@@ -165,6 +165,15 @@ describe 'mysql_test::installation_server' do
         package_name: 'mysql-server-5.5'
       )
     end
+
+    it 'installs mysql_server_installation_package[default] when version is 5.6' do
+      installation_server_package_debian_8.node.normal['mysql']['version'] = '5.6'
+      installation_server_package_debian_8.converge(described_recipe)
+      expect(installation_server_package_debian_8).to install_mysql_server_installation_package('default').with(
+        version: '5.6',
+        package_name: 'mysql-server-5.6'
+      )
+    end
   end
 
   context 'using ubuntu 12.04' do
