@@ -172,6 +172,7 @@ describe 'mysql_test::installation_server' do
       expect(installation_server_package_debian_8).to install_mysql_server_installation_package('default').with(
         version: '5.6',
         package_name: 'mysql-server-5.6'
+        package_version: '5.6.30-1~bpo8+1'
       )
     end
   end
